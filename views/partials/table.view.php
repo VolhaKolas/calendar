@@ -1,5 +1,5 @@
 <div class="row">
-<?php foreach ($currentYear as $key=>$year):
+<?php foreach (\Core\FirstMonthDay::month() as $key=>$year):
     $countDays = 0; ?>
     <?php $firstWeekDay = ceil(($year['days'] + \Core\FirstMonthDay::day($key))/ 7); ?>
 
@@ -11,19 +11,19 @@
 
             <thead>
                 <tr>
-                    <?php foreach ($weekDays as $weekDay):?>
+                    <?php foreach (\Core\FirstMonthDay::$weekDays as $weekDay):?>
                         <th><?= $weekDay?></th>
                     <?php endforeach;?>
                 </tr>
             </thead>
 
             <tbody>
-                <?php for($j = 1; $j <= $firstWeekDay; $j++): ?>
+                <?php for($row = 1; $row <= $firstWeekDay; $row++): ?>
                     <tr>
-                        <?php for($z = 1; $z <= 7; $z++): ?>
+                        <?php for($col = 1; $col <= 7; $col++): ?>
                             <td>
                                 <?php
-                                if ($j == 1 and $z <= \Core\FirstMonthDay::day($key)) {
+                                if ($row == 1 and $col <= \Core\FirstMonthDay::day($key)) {
                                     echo "";
                                 }
                                 else {

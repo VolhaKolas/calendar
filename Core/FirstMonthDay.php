@@ -12,12 +12,31 @@ namespace Core;
 class FirstMonthDay
 {
 
-    public static function day($key) {
+    public static $weekDays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+
+    public static function month() {
         $year = Year::year();
-        $days = 0;
         $feb = February::feb($year);
-        $month = [31, $feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        for ($i = 1; $i < $year; $i++) {
+        $month = [
+            ['month' => "Январь", 'days' => 31],
+            ['month' => "Февраль", 'days' => $feb],
+            ['month' => "Март", 'days' => 31],
+            ['month' => "Апрель", 'days' => 30],
+            ['month' => "Май", 'days' => 31],
+            ['month' => "Июнь", 'days' => 30],
+            ['month' => "Июль", 'days' => 31],
+            ['month' => "Август", 'days' => 31],
+            ['month' => "Сентябрь", 'days' => 30],
+            ['month' => "Октябрь", 'days' => 31],
+            ['month' => "Ноябрь", 'days' => 30],
+            ['month' => "Декабрь", 'days' => 31]
+        ];
+        return $month;
+    }
+
+    public static function day($key) {
+        $days = 0;
+        for ($i = 1; $i < Year::year(); $i++) {
             $leap = 365;
             if ($i % 4 == 0 and $i % 100 != 0 or $i % 400 == 0) {
                 $leap = 366;
@@ -26,14 +45,11 @@ class FirstMonthDay
         }
         if($key != 0) {
             for ($i = 0; $i < $key; $i++) {
-                $days = $days + $month[$i];
+                $days = $days + static::month()[$i]['days'];
             }
         }
         $firstMonthDay = $days % 7;
         return $firstMonthDay;
     }
-    public static function firstDay($firstMonthDay) {
-        //$firstDay = ceil(($year['days'] + $firstMonthDay)/ 7);
-
-    }
+    
 }

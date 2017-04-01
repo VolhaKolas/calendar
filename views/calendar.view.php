@@ -1,6 +1,6 @@
 <?php require_once 'partials/header.view.php'; ?>
 
-    <div class="title text-info text-center"><p class="h1">Календарь на <?= $year; ?> год</p></div>
+    <div class="title text-info text-center"><p class="h1">Календарь на <?= \Core\Year::year(); ?> год</p></div>
 
     <div class="row">
         <div class="col-md-3 col-sm-3">
