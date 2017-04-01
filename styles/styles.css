@@ -8,8 +8,15 @@
 .tb {
     height: 300px;
 }
-td {
+td, .title {
     color: cornflowerblue;
+}
+.btn {
+    background-color: cornflowerblue;
+    color: #ff2723;
+}
+.btn:hover {
+    color: firebrick;
 }
 td:last-of-type, td:nth-of-type(6n+6) {
     color: #ff2723;
@@ -18,8 +25,21 @@ caption {
     background-color: cornflowerblue;
     color: #ff2723;
     text-align: center;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
 .title {
     margin: auto;
     width: 100%;
+}
+.image {
+    background-image: url("east.jpg");
+    background-repeat: no-repeat;
+    width: 20em;
+    height: 20em;
+    background-size: 400%;
+    margin-bottom: 1em;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
 }

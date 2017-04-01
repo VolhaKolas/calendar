@@ -23,16 +23,10 @@
                         <?php for($col = 1; $col <= 7; $col++): ?>
                             <td>
                                 <?php
-                                if ($row == 1 and $col <= \Core\FirstMonthDay::day($key)) {
-                                    echo "";
-                                }
-                                else {
-                                    $countDays = $countDays + 1;
+                                if (($row != 1 or $col > \Core\FirstMonthDay::day($key))) {
+                                    $countDays = $countDays + 1; //count for days
                                     if ($countDays <= $year['days']) {
                                         echo $countDays;
-                                    }
-                                    else {
-                                        echo "";
                                     }
                                 }
                                 ?>

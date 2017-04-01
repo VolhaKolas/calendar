@@ -14,6 +14,9 @@ class FirstMonthDay
 
     public static $weekDays = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 
+    /*
+     * this method creates an array of month names and month days
+     */
     public static function month() {
         $year = Year::year();
         $feb = February::feb($year);
@@ -34,6 +37,10 @@ class FirstMonthDay
         return $month;
     }
 
+    /*
+     * this method returns first month day
+     * $key - month number (from 0 to 11)
+     */
     public static function day($key) {
         $days = 0;
         for ($i = 1; $i < Year::year(); $i++) {
@@ -43,6 +50,8 @@ class FirstMonthDay
             }
             $days = $days + $leap;
         }
+
+        //days for no first month of the year
         if($key != 0) {
             for ($i = 0; $i < $key; $i++) {
                 $days = $days + static::month()[$i]['days'];
@@ -51,5 +60,5 @@ class FirstMonthDay
         $firstMonthDay = $days % 7;
         return $firstMonthDay;
     }
-    
+
 }

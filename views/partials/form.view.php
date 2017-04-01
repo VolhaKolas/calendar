@@ -6,7 +6,7 @@
                     <input type="text" class="form-control" id="year" name="year" required>
                 </div>
 
-                <button id="submit" class="btn btn-primary pull-right">Введите год</button>
+                <button id="submit" class="btn pull-right">Введите год</button>
             </form>
         </div>
     </div>

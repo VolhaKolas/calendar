@@ -11,9 +11,12 @@ namespace Core;
 
 class Year
 {
+    /*
+     * this method return data from form
+     */
     public static function year() {
-        if(Request::getMethod() == 'POST' and isset($_POST['year'])) {
-            $year = $_POST['year'];
+        if(Request::getMethod() == 'POST' and isset($_POST['year']) and $_POST['year'] > 0) {
+            $year = trim(intval($_POST['year']));
         }
         else {
             $year = date('Y');
