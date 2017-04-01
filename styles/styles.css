@@ -1,0 +1,29 @@
+.red{
+    color:red;
+}
+.form-area
+{
+    background-color: #FAFAFA;
+    padding: 10px 20px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+}
+
+.tb {
+    height: 300px;
+}
+td {
+    color: cornflowerblue;
+}
+td:last-of-type, td:nth-of-type(6n+6) {
+    color: #ff2723;
+}
+caption {
+    background-color: cornflowerblue;
+    color: #ff2723;
+    text-align: center;
+}
+.title {
+    margin: auto;
+    width: 100%;
+}
