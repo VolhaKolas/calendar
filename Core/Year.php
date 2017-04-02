@@ -15,7 +15,7 @@ class Year
      * this method return data from form
      */
     public static function year() {
-        if(Request::getMethod() == 'POST' and isset($_POST['year']) and $_POST['year'] > 0) {
+        if(Request::getMethod() == 'POST' and isset($_POST['year']) and $_POST['year'] > 0 and $_POST['year'] <= 1e+4) {
             $year = trim(intval($_POST['year']));
         }
         else {

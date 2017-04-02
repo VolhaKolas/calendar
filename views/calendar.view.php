@@ -1,5 +1,4 @@
 <?php require_once 'partials/header.view.php'; ?>
-
 <!-- Calendar title -->
     <div class="row">
         <div class="title text-center">
