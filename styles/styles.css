@@ -9,21 +9,21 @@
     height: 300px;
 }
 td, .title {
-    color: cornflowerblue;
+    color: darkblue;
 }
 .btn {
-    background-color: cornflowerblue;
-    color: #ff2723;
+    background-color: darkblue;
+    color: crimson;
 }
 .btn:hover {
     color: firebrick;
 }
 td:last-of-type, td:nth-of-type(6n+6) {
-    color: #ff2723;
+    color: crimson;
 }
 caption {
-    background-color: cornflowerblue;
-    color: #ff2723;
+    background-color: darkblue;
+    color: crimson;
     text-align: center;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
@@ -35,8 +35,8 @@ caption {
 .image {
     background-image: url("east.jpg");
     background-repeat: no-repeat;
-    width: 20em;
-    height: 20em;
+    width: 15em;
+    height: 15em;
     background-size: 400%;
     margin-bottom: 1em;
     float: none;
